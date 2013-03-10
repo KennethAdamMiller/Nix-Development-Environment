@@ -1,0 +1,45 @@
+config defaultToCurrentScreen true
+
+#window grid 
+bind g:cmd;alt;ctrl grid padding 0:2,2 1:3,2
+
+# Common Position Bindings
+bind right:ctrl;cmd;alt  push     right         bar-resize:screenSizeX/2
+bind left:ctrl;cmd;alt   push     left          bar-resize:screenSizeX/2
+bind up:ctrl;cmd;alt     push     up            bar-resize:screenSizeY/2
+bind down:ctrl;cmd;alt   push     down          bar-resize:screenSizeY/2
+bind 1:ctrl;cmd;alt      corner   top-left      resize:screenSizeX/2;screenSizeY/2
+bind 2:ctrl;cmd;alt      corner   top-right     resize:screenSizeX/2;screenSizeY/2
+bind 3:ctrl;cmd;alt      corner   bottom-left   resize:screenSizeX/2;screenSizeY/2
+bind 4:ctrl;cmd;alt      corner   bottom-right  resize:screenSizeX/2;screenSizeY/2
+
+bind f:cmd;alt;ctrl      chain     push left    bar-resize:screenSizeX 
+
+# Resize Bindings
+# bigger...
+bind l:ctrl;alt          resize +10%     +0
+bind h:ctrl;alt          resize +10%     +0 top-right
+bind k:ctrl;alt          resize +0       +10% bottom-left
+bind j:ctrl;alt          resize +0       +10% top-right
+# smaller
+bind l:ctrl;shift        resize -10%     +0 bottom-right
+bind h:ctrl;shift        resize -10%     +0 bottom-left
+bind k:ctrl;shift        resize +0       -10% top-right
+bind j:ctrl;shift        resize +0       -10% bottom-right
+
+# Throw Bindings
+bind right:ctrl;cmd    throw           right resize
+bind left:ctrl;cmd     throw           left  resize
+
+# Nudge Bindings
+bind l:cmd;ctrl;alt      nudge           +10% +0
+bind h:cmd;ctrl;alt      nudge           -10% +0
+bind k:cmd;ctrl;alt      nudge           +0   -10%
+bind j:cmd;ctrl;alt      nudge           +0   +10%
+
+# Focus Bindings
+bind up:cmd     focus behind
+bind down:cmd   focus behind
+
+# Window Hints
+bind esc:cmd hint

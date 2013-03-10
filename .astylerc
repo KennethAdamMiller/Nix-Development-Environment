@@ -1,0 +1,17 @@
+--indent-classes
+--indent-switches
+--indent-cases
+--break-blocks
+--pad-paren-in
+--unpad-paren
+--delete-empty-lines
+--fill-empty-lines
+--add-brackets
+--add-one-line-brackets
+--convert-tabs
+--preserve-date
+--indent=spaces=2
+-A4
+--align-pointer=middle
+--align-reference=type
+--mode=c

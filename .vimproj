@@ -1,0 +1,6 @@
+; This is vimproj file
+;  Format:
+;  [project]
+; path = /path to project
+; vim = path to settings_file.vim
+; docksend

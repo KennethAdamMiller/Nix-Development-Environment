@@ -1,0 +1,25 @@
+reload() { source ~/.bash_profile ; }
+alias msfCLI="/Applications/msf3/msfcli"
+msfConsole() { export a=$(pwd) ; cd /Applications/msf3/ ; svn update ; cd $a ;  /Applications/     msf3/msfconsole ; }
+
+openOfficeReset() { rm -rf "~/Library/Saved\ Application\ State/org.openoffice.script.savedState/  " ; }
+
+disableVirtualMem() { sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.            dynamic_pager.plist ; sudo rm /private/var/vm/swapfile* ; }
+enableVirtualMem() { sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.dynamic_pager. plist ; }
+
+disableSpotlight() { sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist ; }
+enableSpotlight() { sudo launchctl load -wF /System/Library/LaunchDaemons/com.appale.metadata.mds. plist ; }
+
+gdb_breakpoints_file="~/.gdb_breakpoints"
+addBreakpoint() { echo "break $1" >> $gdb_breakpoints_file ; }
+clearBreakpoints() { echo "" > $gdb_breakpoints_file ; }
+removeBreakpoint() { awk 'match($0, "^break *")==0 {print $0}' $gdb_breakpoints_file ; }
+
+
+space() { tput setaf 2 ; echo $(python -c 'print "-"*80') ; tput setaf 17 ; }
+
+growl() { echo -e $'\e]9;'${1}'\007' ; }
+
+awsEC2() { ssh -i ~/Documents/FreeEC2ForSSH.pem ubuntu@ec2-23-20-202-208.compute-1.amazonaws.com ; }
+
+alias vim=~/MacVim-snapshot-64/MacVim.app/Contents/MacOS/Vim
