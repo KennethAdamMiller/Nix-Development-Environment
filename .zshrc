@@ -5,14 +5,14 @@ export PATH=$HOME/.opam/system/bin:/Library/Frameworks/Python.framework/Versions
 #bindkey '^[[A' up-line-or-search
 #bindkey '^[[B' down-line-or-search
 
-. ~/.shell_functions
+#. ~/.shell_functions
 
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 #export PATH=$PATH:~/bin
-eval `opam config -env`
+eval `opam env`
 
 export HISTFILESIZE=
 export HISTSIZE=
@@ -51,10 +51,10 @@ ZSH_THEME="jonathan"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump brew dircycle extract git-extras git-flow- git-hubflow git-remote-branch gitfast github grails gradle macport mvn pip)
+plugins=(git brew dircycle extract git-extras git-flow git-hubflow gitfast github grails gradle mvn pip virtualenv)
 
 source $ZSH/oh-my-zsh.sh
-set -o vi
+set -o emacs
 
 #[ $TERM != "screen"  ] && exec tmux
 

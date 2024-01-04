@@ -18,8 +18,8 @@ removeBreakpoint() { awk 'match($0, "^break *")==0 {print $0}' $gdb_breakpoints_
 
 space() { tput setaf 2 ; echo $(python -c 'print "-"*80') ; tput setaf 17 ; }
 
-growl() { echo -e $'\e]9;'${1}'\007' ; }
+#growl() { echo -e $'\e]9;'${1}'\007' ; }
 
-awsEC2() { ssh -i ~/Documents/FreeEC2ForSSH.pem ubuntu@ec2-23-20-202-208.compute-1.amazonaws.com ; }
+#awsEC2() { ssh -i ~/Documents/FreeEC2ForSSH.pem ubuntu@ec2-23-20-202-208.compute-1.amazonaws.com ; }
 
-alias vim=~/MacVim-snapshot-64/MacVim.app/Contents/MacOS/Vim
+#alias vim=~/MacVim-snapshot-64/MacVim.app/Contents/MacOS/Vim
